@@ -34,10 +34,10 @@ public class ItemServiceTests
         _context = new DataContext(_optionsBuilder.Options);
         _repository = new ItemRepository(_context);
         _service = new Mock<IItemService>();
-        _service.Setup(x => x.GetItemsByInteger("ItemId",It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync()
-        _service.Setup(x => x.GetItemsByInteger("ShopId", It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync();
-        _service.Setup(x => x.GetItemsByInteger("ItemCategory", It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync();
-        _service.Setup(x => x.GetItemsByInteger("InvalidString", It.IsInRange(3, 30, Range.Inclusive))).ReturnsAsync();
+      //  _service.Setup(x => x.GetItemsByInteger("ItemId", It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync();
+       // _service.Setup(x => x.GetItemsByInteger("ShopId", It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync();
+       // _service.Setup(x => x.GetItemsByInteger("ItemCategory", It.IsInRange(0, 3, Range.Inclusive))).ReturnsAsync();
+       // _service.Setup(x => x.GetItemsByInteger("InvalidString", It.IsInRange(3, 30, Range.Inclusive))).ReturnsAsync();
 
     }
 
@@ -55,27 +55,29 @@ public class ItemServiceTests
             Extras = "someExtrasString",
             DeliveryDetails = "someDeliveryString"
         };
+        /*
+                foreach (var oneItem in one)
+                {
+                    for(int i=0; i < 8; i++)
+                    if (oneItem.  == two.GetHashCode())
+                    {
+                        return false;
+                    }
 
-        foreach (var oneItem in one)
-        {
-            for(int i=0; i < 8; i++)
-            if (oneItem.  == two.GetHashCode())
-            {
-                return false;
+                }
+
+                return true
+
+
             }
 
-        }
+            [TestMethod]
+            public Task GetItemsByInteger_whereIntegerExists_returnResult()
+            {
 
-        return true
-
-
-    }
-
-    [TestMethod]
-    public Task GetItemsByInteger_whereIntegerExists_returnResult()
-    {
-
+        */
+        return true;
 
     }
-
-}
+        
+    }
